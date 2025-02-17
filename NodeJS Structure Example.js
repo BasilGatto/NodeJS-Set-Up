@@ -14,6 +14,7 @@ app.get('/', async (req, res) => {
   try {
     const [rows] = await pool.query('SELECT id, Firstname, Lastname, Address FROM users');
     res.send(`
+    <!--This is setting the visuals for the dataframe to be held in-->
       <style>
       table { border-collapse: collapse; width: 100%;}
       th, td { border: 1px solid black; padding: 8px; text-align: left;}
